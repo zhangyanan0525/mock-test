@@ -27,7 +27,7 @@ class NameINput extends React.Component {
         this.getAlldata();
     }
     getAlldata = () => {
-        axios.get('/getAlldata')
+        axios.get('/api/getAlldata')
             .then((e) => {
 
                 const data = e.data.data.map((item) => {
@@ -247,7 +247,8 @@ class NameINput extends React.Component {
                     columns={columns}
                     dataSource={data}
                 />
-                <div>啦啦啦</div>
+                <div>dddddddd</div>
+                <div>hehe111111</div>
             </div>
         );
     }

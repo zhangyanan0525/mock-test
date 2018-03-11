@@ -5,10 +5,11 @@ const AssetsPlugin = require('assets-webpack-plugin')
 
 module.exports = {
     // 入口文件名称
-    entry: './src/index.jsx',
+    entry: ['webpack-hot-middleware/client?noInfo=false','./src/index.jsx'],
+    // entry: ['./dev-client','react-hot-loader/patch','babel-polyfill', './src/index.jsx'],
     // 输出文件名称
     output: {
-        publicPath: 'http://127.0.0.1:9000/dist/',
+        publicPath: '/',
         path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js'
     },
@@ -56,20 +57,20 @@ module.exports = {
         }),
     ],
 
-    devServer: {
-        headers: {
-            "Access-Control-Allow-Origin": "*"
-        },
-        hot: true,
-        hotOnly: true,
-        host: "127.0.0.1",
-        port: 9000,
+    // devServer: {
+    //     headers: {
+    //         "Access-Control-Allow-Origin": "*"
+    //     },
+    //     hot: true,
+    //     hotOnly: true,
+    //     host: "127.0.0.1",
+    //     port: 9000,
         // disableHostCheck: true,
         // overlay: {
         //     warnings: true,
         //     errors: true
         // },
-    },
+    // },
     // devServer: {
     //     // contentBase: path.join(__dirname, "dist"),
     //     compress: true,

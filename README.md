@@ -1,9 +1,9 @@
 # webpack-mongodb-react
 
 ## 运行项目
-npm run debug:client
+npm run dev
 
-npm run debug:server
+localhost:1111
 
 
 
